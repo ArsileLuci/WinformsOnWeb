@@ -1,0 +1,8 @@
+﻿@namespace System.Windows.Forms
+@inherits Component
+<div style="position:absolute; width:@(this.Size.Width)px; height:@(this.Size.Height)px">
+    @foreach (var item in this.Controls)
+    {
+        <ComponentContainer |Parent|=@this |Component|=@item />
+    }
+</div>
